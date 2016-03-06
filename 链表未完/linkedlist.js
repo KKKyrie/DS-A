@@ -7,7 +7,8 @@ function Node(element){
 			this.head = new Node("head");//头结点
 			this.find = find;
 			this.insert = insert;
-			//this.remove = remove;
+			this.remove = remove;
+			this.findPrevious = findPrevious;
 			this.display = display;
 		}
 
@@ -37,6 +38,22 @@ function Node(element){
 			}
 		}
 
+		function remove(item){
+			var prevNode = this.findPrevious(item);
+			if (!(prevNode == null)){
+				prevNode.next = prevNode.next.next;
+				//跳过了待删除节点，让前一个节点指向了待删除节点的后一个节点
+			}
+		}
+
+		function findPrevious(item){
+			var currNode = this.head;
+			while (!(currNode == null) && (currNode.next.element != item)){
+				currNode = currNode.next;
+			}
+			return currNode;
+		}
+
 
 		//测试函数
 		function test(){
@@ -44,5 +61,8 @@ function Node(element){
 			station.insert("航天城","head");
 			station.insert("凤栖原","航天城");
 			station.insert("三爻","凤栖原");
+			station.display();
+			station.remove("凤栖原");
+			alert("删除‘凤栖原’");
 			station.display();
 		}
