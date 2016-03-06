@@ -1,20 +1,4 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>队列</title>
-    </head>
-    
-    <body>
-        <h1>队列-FIFO</h1>
-        <h2>队列的两种主要操作：1.向队列中插入新元素（入队，在队尾）。 2.删除队列中的元素（出队，在队头）。</h2>
-        <button onclick="testCavs()">testCavs</button><hr>
-        <button onclick="testWars()">testWars</button><hr>
-        <input type="text" id="huiwen">
-        <button onclick="isHuiwen()">用Deque类判断是不是回文</button><hr>
-        
-        
-        <script type="text/javascript">
-            function Queue(){//构造函数
+ function Queue(){//构造函数
                 this.dataStore = [];
                 this.enter = enter;
                 this.exit = exit;
@@ -141,16 +125,3 @@
                     alert("不是！");
                 }
             }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </script>
-    </body>
-</html>

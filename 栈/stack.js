@@ -1,48 +1,4 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>栈</title>
-    </head>
-    
-    <body>
-        <h3>栈是一种特殊的列表，栈内的元素只能通过列表的一端访问，这一端称为栈顶。</h3>
-        <h1>LIFO,last-in-first-out</h1>
-        <h3>入栈使用push()方法，出栈使用pop()方法，peek()方法返回栈顶元素但不删除它</h3>
-        <h3>使用变量top记录栈顶元素的位置</h3>
-        <h3>clear()方法清除栈内所有元素</h3>
-        <h3>length属性记录栈内元素的个数</h3>
-        <h3>empty属性表示栈内是否含有元素</h3>
-        <hr>
-        <h1>测试</h1>
-        <button onclick="test()">测试</button>
-        <hr>
-        <h2>进制转换</h2>
-        <input type="text" id="number">
-        <button onclick="scale(2)">二进制</button>
-        <button onclick="scale(8)">八进制</button>
-        <hr>
-        <h2>判断回文</h2>
-        <input type="text" id="word">
-        <button onclick="isPalindrome()">判断</button>
-        <hr>
-        <h2>递归</h2>
-        <hr>
-        <h3>练习1</h3>
-        <p>栈可以用来判断一个算数表达式在中烦人括号是否匹配。编写一个函数，该函数接受一个算数表达式作为参数，返回括号缺失的位置。</p><br>
-        <label>输入一个算数表达式：</label>
-        <input type="text" id="expression">
-        <button onclick="check()">Check</button>
-        <hr>
-        <h3>练习3</h3>
-        <p>想象你有一盒佩兹糖果，里面装满了红色、黄色、白色的糖果，但是你不喜欢黄色的糖果。<br>使用栈（有可能用到多个栈）写一段程序，在不改变盒内其他糖果叠放顺序的基础上，将黄色糖果移出</p>
-        <button onclick="sugar()">测试</button>
-        
-        
-        
-        
-        
-        <script type="text/javascript">
-            function Stack(){//栈的构造函数
+ function Stack(){//栈的构造函数
                 this.dataStore = [];//存储数据的数组
                 this.top = 0;//栈顶位置
                 this.getLength = getLength;
@@ -170,16 +126,3 @@
                 no_yellow_sugars.reverse();
                 alert(no_yellow_sugars);
             }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </script>
-    </body>
-</html>
