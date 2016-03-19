@@ -3,7 +3,7 @@ function sort(arr){
     for (var i = 0; i < length; i++){
         min = arr[i];
         k = i;
-        for (var j = i + 1; j < length; j++){
+        for (var j = i + 1; j < length; j++){//每轮在剩余元素中找一个最小值
             if (min > arr[j]){
                 min = arr[j];
                 k = j;
